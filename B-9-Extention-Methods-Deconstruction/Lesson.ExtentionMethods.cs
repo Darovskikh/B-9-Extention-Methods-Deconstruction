@@ -5,7 +5,7 @@ namespace Base_Lesson_9.Lesson
 {
     public static partial class Lesson
     {
-    }   
+    }
 
     public class Song
     {
@@ -19,7 +19,7 @@ namespace Base_Lesson_9.Lesson
         public List<Song> Songs { get; set; }
 
         public void Sort()
-        {            
+        {
             this.Songs = this.Songs.SortSongs();
         }
     }
@@ -30,13 +30,13 @@ namespace Base_Lesson_9.Lesson
 
         public void Sort(List<Song> songs)
         {
-           
+
             this.Songs = this.Songs.SortSongs();
         }
 
         public void Load(params Playlist[] playlists)
         {
-            var songs = playlists.SelectMany(x => x.Songs);           
+            var songs = playlists.SelectMany(x => x.Songs);
             this.Songs = this.Songs.SortSongs();
             //Do distincting
             //this.Songs = songs.ToArray();
@@ -53,7 +53,7 @@ namespace Base_Lesson_9.Lesson
             return songs;
         }
     }
-    
+
     #region Sorting utilites
 
     /*
@@ -108,7 +108,7 @@ namespace Base_Lesson_9.Lesson
 
         public Func<T, T, bool> cmp { get; set; }
     }
-    */   
+    */
 
     #endregion Sorting utilites
 }

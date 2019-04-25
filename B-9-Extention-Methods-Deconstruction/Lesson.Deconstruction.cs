@@ -23,7 +23,7 @@ namespace Base_Lesson_9.Lesson
     public class Person
     {
         public string FirstName { get; set; }
-        public string LastName { get; set; }   
+        public string LastName { get; set; }
 
         public void Deconstruct(out string fn, out string ln, out string fl)
         {
